@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git branch: 'main', credentialsId: 'git', url: 'https://github.com/dsilvarodney1/python-for-devops'
+              git branch: '${Branch}', credentialsId: 'git', url: 'https://github.com/dsilvarodney1/python-for-devops'
             }
         }
         stage('build'){
